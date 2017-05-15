@@ -90,10 +90,10 @@ int wmain(int argc, wchar_t * argv[])
 					else wprintf(L"ERROR: WANACRY! magic number not found\n");
 				}
 				else wprintf(L"ERROR: no \'.\' at the end of the user file ?\n");
-				LocalFree(pbRsaKey);
+				LocalFree(pbEncData);
 			}
 			else wprintf(L"ERROR: reading userfile \'%s\': %u\n", argv[2], GetLastError());
-			LocalFree(pbEncData);
+			LocalFree(pbRsaKey);
 		}
 		else wprintf(L"ERROR: reading privatekey file \'%s\': %u\n", argv[1], GetLastError());
 	}
