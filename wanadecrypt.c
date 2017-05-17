@@ -104,7 +104,7 @@ int wmain(int argc, wchar_t * argv[])
 									{
 										if(CryptImportKey(hProv, pDec->data, pDec->totalBytes, 0, 0, &hUserRsaKey))
 										{
-											ext[1] = L'p';
+											ext[1] = L'd';
 											wprintf(L"\nSave DecPK: %s\n", argv[2]);
 											if(!SIMPLE_kull_m_file_writeData(argv[2], pDec->data, pDec->totalBytes))
 												wprintf(L"ERROR: saving raw user privatekey file \'%s\': %u\n", argv[2], GetLastError());
